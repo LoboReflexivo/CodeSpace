@@ -71,3 +71,4 @@ esto va seguido de otros comandos dependiendo de lo que queramos hacer:
         FIRST: para añadir nueva columna en primera posición.
     
     --MODIFY COLUMN:modificar propiedades de una columna.
+    
