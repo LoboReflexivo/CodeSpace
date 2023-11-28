@@ -71,3 +71,27 @@ esto va seguido de otros comandos dependiendo de lo que queramos hacer:
         FIRST: para añadir nueva columna en primera posición.
     
     --MODIFY COLUMN:modificar propiedades de una columna.
+
+
+Ejercicios:
+
+-Mostrar el nombre y apellido de los usuarios cuyo nombre contenga la letra 'a' y su apellidp termine en 'son'
+
+SELECT name,last_name from Users WHERE name like '%a%' AND last_name like '%son';
+
+
+-Obtened el nombre y apellido concatenados con un alias del usuario con ID = 1
+
+
+SELECT CONCAT(name,' ',last_name) AS alias FROM Users Where user_id = 1;
+
+-Ahora vamos a insertar una nueva columna llamda "sexo" que sea de tipo ENUM con los valores (M, F) por defecto M.
+
+ALTER TABLE Users ADD COLUMN sexo ENUM ('M', 'F') DEFAULT 'M';
+
+-Después vamos a mover la columna "sexo" después de la columna -"name".
+
+ALTER TABLE Users MODIFY COLUMN sexo ENUM ('M','F') AFTER name;
+
+-Vamos a cambiar  el nombre  de la columna sexo a "gender".
+
