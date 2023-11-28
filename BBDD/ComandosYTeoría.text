@@ -95,3 +95,4 @@ ALTER TABLE Users MODIFY COLUMN sexo ENUM ('M','F') AFTER name;
 
 -Vamos a cambiar  el nombre  de la columna sexo a "gender".
 
+Veremos
