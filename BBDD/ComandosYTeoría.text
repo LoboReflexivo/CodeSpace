@@ -1,0 +1,73 @@
+--SELECT * FROM nombretabla; --> para ver el resutlado de una tabla con todos sus registros
+
+--DESCRIBE nombretabla; --> para ver la estructura de una tabla.
+
+CREAR UNA BASE DE DATOS:
+
+--CREATE DATABASE nombreBaseDeDatos;
+
+--SHOW DATABASES; --> para saber cuántas basesd de datos existen en nuestro sistema.
+
+--USE nombreBaseDeDatos --> para seleccionar una base de datos.
+
+CREAR UNA TABLA:
+
+--CREATE TABLE nombreTabla;
+--SHOW TABLE nombreTabla; 
+
+Con CREATE TABLE, se creará una tabla con las columnas que indiquemos. Dichas columnas van entre paréntesis y cada columna separadas por coma.
+
+    EJEMPLO:
+        CREATE TABLE gente (nombre VARCHAR(40), fecha DATE);
+
+        CREATE TABLE nombre_tabla (nombre_columna | tipo | null(default)/notnull | Default valor_elegido_por_defecto (opcional) | AUTO_INCREMENT | PRIMARY KEY) |COMMENT 'string' | definicion_referencia
+
+        usar NOT NULL PRIMARY KEY equivale a PRIMARY KEY, NOT NULL KEY o, sencillamente, KEY, debido a que si ponemos que una columan(atributo) es KEY no puede tener valores NULL automáticamente.
+
+PRIMARY KEY compuestas:
+
+Se usan cuando no hay ningún atributo en la tabla que identifique cada registro de forma única y se necesite otra información. Si hay KEY compuesta, lo pondremos al final del CREATE TABLE:
+
+    EJEMPLO:
+
+    CREATE TABLE butacaCube (
+        sala int not null,
+        num_butaca int not null,
+        color varchar(50),
+        PRIMARY KEY (sala, num_butaca)
+    );
+
+En las PRIMARY KEY, solo 1 de las columans puede tener la propiedad AUTO_INCREMENT.
+
+AUTO_INCREMENT
+
+Esta columna(atributo) solo puede ser de tipo entero
+
+COMMENT
+
+Los comentarios sirven como información adicional sobre alguna característica especial de la columna.
+
+BORRAR UNA TABLA:
+
+-- DROP TABLE nombreTabla;
+
+
+MODIFICAR ESTRUCTURA DE UNA TABLA
+
+--ALTER TABLE nombretabla
+
+esto va seguido de otros comandos dependiendo de lo que queramos hacer:
+
+    --RENAME: cambiar el nombre
+    --DROP COLUMN: eliminar columna de tabla
+    (Para eliminar varias columnas usamos la misma sintaxis separando cada columna con una coma).
+    --DROP PRIMARY KEY: eliminar clave primaria
+    -ADD nombre-columna: insertar nueva columna(al final de la tabla)
+        
+        AFTER: Para añadir una columan después de otra usamos AFTER:
+
+        ALTER TABLE granciudad ADD origen VARCHAR(50) AFTER nombre;
+
+        FIRST: para añadir nueva columna en primera posición.
+    
+    --MODIFY COLUMN:modificar propiedades de una columna.
