@@ -71,9 +71,6 @@ esto va seguido de otros comandos dependiendo de lo que queramos hacer:
         FIRST: para añadir nueva columna en primera posición.
     
     --MODIFY COLUMN:modificar propiedades de una columna.
-<<<<<<< HEAD
-    
-=======
 
 
 Ejercicios:
@@ -98,4 +95,3 @@ ALTER TABLE Users MODIFY COLUMN sexo ENUM ('M','F') AFTER name;
 
 -Vamos a cambiar  el nombre  de la columna sexo a "gender".
 
->>>>>>> 2db7d20d73937fb108afa1fdd1a4aa7af2ecdc2c
